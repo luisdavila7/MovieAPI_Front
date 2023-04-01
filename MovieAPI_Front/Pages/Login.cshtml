@@ -1,0 +1,44 @@
+﻿@page
+@model MovieAPI_Front.Pages.LoginModel
+@{
+}
+<div class="row">
+    <div class="mx-auto col-10 col-md-8 col-lg-6">
+        <form class="form-control-plaintext" method="post">
+            <div class="col-md-12 text-center">
+                <h1 class="display-5">Welcome to Movie Rate</h1>
+            </div>
+            <div class="col-md-12 text-center">
+                <p class="lead">The place where you could rate and comment on your favorite movies</p>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="@Model.User.Email"></label>
+                    <input asp-for="@Model.User.Email" class="form-control" />
+                    <span asp-validation-for="@Model.User.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="@Model.User.Password"></label>
+                    <input type="password" asp-for="@Model.User.Password" class="form-control" />
+                    <span asp-validation-for="@Model.User.Password class=" text-danger"></span>
+                </div>
+            </div>
+            <br />
+
+            <div class="container my-3">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p class="lead">Dont have and Account, press here <a href="#" class="link-info">Sign up</a></p>
+                </div>
+            </div>
+
+@*            @if (Model.ErrorMessage != null)
+            {
+                    <div class="alert alert-danger">@Model.ErrorMessage</div>
+            }*@
+         </form>
+    </div>
+</div>
+
+
+
